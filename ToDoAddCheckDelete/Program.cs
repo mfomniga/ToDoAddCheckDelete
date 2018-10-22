@@ -22,6 +22,8 @@ namespace ToDoAddCheckDelete
                 Console.WriteLine("Gib den Namen der Person ein die zu hinzufügen willst:");
                 //string userInputName = Console.ReadLine();
                 namen.Add(Console.ReadLine());
+
+
             }
             else if(userInput.StartsWith("delete "))
             {
