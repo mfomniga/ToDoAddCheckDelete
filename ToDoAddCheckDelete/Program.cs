@@ -6,29 +6,62 @@ namespace ToDoAddCheckDelete
 {
     class Program
     {
-        private static List<string> namen = new List<string>();
+        private static List<ToDo> meineMitglieder = new List<ToDo>();
 
         static void Main(string[] args)
         {
+            string test;
+            string test2;
+            string test3;
+
             
 
-            Console.WriteLine("Benutze die Befehle Add, Check und Delete!");
+            Console.WriteLine("Benutze die Befehle add, check und delete!");
             
-            // add mathias
+            // add Michael Lohr
             string userInput = Console.ReadLine();
 
-            if(userInput.StartsWith("add "))
+            if (userInput.StartsWith("add"))
             {
-                Console.WriteLine("Gib den Namen der Person ein die zu hinzufügen willst:");
-                //string userInputName = Console.ReadLine();
-                namen.Add(Console.ReadLine());
+                
+                string[] alleParts = userInput.Split(" ");
+                string[] relevanteParts = new string[] { };
+                alleParts.CopyTo(relevanteParts, 1);
 
+                
+                string name = string.Join(" ", relevanteParts);
+
+
+
+                ToDo add = new ToDo(name, false);
+                Console.WriteLine("{0} wurde der Liste hinzugefügt", name);
+
+
+
+                // alle parts nach 0 aneinanderreihen
+                //parts[1] = "Michael"
+                //parts[2] = "Lohr"
+
+                //test = userInput.Substring(4);
+                // meineMitglieder.Add(userInput.Substring(4));
 
             }
-            else if(userInput.StartsWith("delete "))
+            else if(userInput.StartsWith("delete"))
             {
-
+                //test2 = userInput.Substring(7);
+                
+                
             }
+            else if (userInput.StartsWith("check"))
+            {
+                test3 = userInput.Substring(6);
+                
+            }
+
+
+       
+
+            
 
 
 
